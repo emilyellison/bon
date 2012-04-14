@@ -1,9 +1,33 @@
 <% provide(:title, '| Sign Up') %>
-<div class='center hero-unit'>
+<div class='center'>
 	<h1>Sign Up</h1>
-	<h2>
-		Keep track of your favorite beers.<br/>
-		Get personalized recommendations.<br/>
-		Share your beer-ing experience with friends.
-	<h2>
+	<h3>Keep track of your favorite beers.<br/>
+	Get personalized recommendations.<br/>
+	Share your beer-ing experience with friends.
+	</h3>
+</div>
+<br/>
+<div class='row'>
+	<div class='span6 offset3'>
+		<%= form_for(@user) do |f| %>
+			<!--Once you add in the jQuery error checking, you should be able 
+			to delete the line "render 'shared/error_messages'"-->
+			<%= render 'shared/error_messages' %>
+			
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+			
+			<%= f.label :email, 'E-mail' %>
+			<%= f.text_field :email %>
+			
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+			
+			<%= f.label :password_confirmation, 'Confirm Password' %>
+			<%= f.password_field :password_confirmation %>
+			
+			<%= f.submit 'Create BeerOn Account', class: 'btn btn-large btn-primary' %>
+			
+		<% end %>
+	</div>
 </div>
