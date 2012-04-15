@@ -165,10 +165,6 @@ input, textarea, select, .uneditable-input {
   @include box_sizing;
 }
 
-.error {
-	color:red;
-}
-
 #error_explanation {
   color:#f00;
   ul {
